@@ -1,0 +1,31 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    venv,
+max-line-length = 120
+max-complexity = 10
+ignore =
+    # class attribute "{0}" is shadowing a python builtin
+    A003,
+
+    # Function complexity tracker !!!
+    C901,
+
+    # Do not call assert False since python -O removes these calls. Instead callers should raise AssertionError().
+    B011,
+
+    # Import statements are in the wrong order (this automatically format by isort)
+    I100,
+
+    # Imported names are in the wrong order (this automatically format by isort)
+    I101,
+
+    # new line between import groups
+    I201,
+
+    # line break after binary operator
+    W504,
+
+    # imported but unused
+    F401,
